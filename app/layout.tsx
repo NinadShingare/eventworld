@@ -8,7 +8,7 @@ weight: ['400', '500', '600', '700'],
   variable: '--font-poppins', });
 
 export const metadata: Metadata = {
-  title: "EventWorld",
+  title: "eventworld",
   description: "EventWorld is a platform for event Organization",
   icons: {
     icon: '/assets/images/logo.svg'
