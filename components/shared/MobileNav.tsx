@@ -27,7 +27,7 @@ const MobileNav = () => {
             </SheetTrigger>
             <SheetContent className="flex flex-col gap-6 bg-white md:hidden">
             <Image 
-                src="/assets/images/logo.svg" width={128} height={38}
+                src="/assets/images/logo1.png" width={128} height={38}
                 alt="EventWorld Logo"
             />
             <Separator className="border border-gray-50" />

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: "eventworld",
   description: "EventWorld is a platform for event Organization",
   icons: {
-    icon: '/assets/images/logo.svg'
+    icon: '/assets/images/logo1.png'
   }
 };
 

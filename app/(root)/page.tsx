@@ -13,7 +13,7 @@ export default async function Home() {
     limit: 6
   });
 
-  console.log(events)
+  //console.log(events)
   return (
     <>
     <section className="bg-primary-50 bg-dotted-pattern bg-contain py-5 md:py-10">
@@ -45,7 +45,7 @@ export default async function Home() {
         CategoryFilter
       </div>
       <Collection 
-      data={[events?.data]}
+      data={events?.data}
       emptyTitle="No Events Found"
       emptyStateSubtext="Come back later"
       collectionType="All_Events"
@@ -59,6 +59,6 @@ export default async function Home() {
 }
 
 // git add .
-// git commit -m ''first2 commit
+// git commit -m 'first2 commit'
 //git branch -M main 
 // git push -u origin main
