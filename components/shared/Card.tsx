@@ -19,7 +19,7 @@ const Card = ({event, hasOrderLink, hidePrice}: CardProps) => {
     const { sessionClaims } = auth();
     const userId = sessionClaims?.userId as string;
     //console.log(JSON.parse(JSON.stringify(event.organizer._id)))
-    console.log(event.organizer._id.toString())
+    //console.log(event.organizer._id.toString())
     //console.log(event)
     //const orgid = event.organizer._id.toString()
     const isEventCreator = userId === event.organizer._id.toString();
@@ -43,7 +43,7 @@ const Card = ({event, hasOrderLink, hidePrice}: CardProps) => {
       )}
 
 
-      <Link href={`/events/${event._id}`}
+      <div
       className="flex min-h-[230px] flex-col gap-3 p-5 md:gap-4"
       >
         {!hidePrice && <div className="flex gap-2">
@@ -57,9 +57,12 @@ const Card = ({event, hasOrderLink, hidePrice}: CardProps) => {
         <p className="p-medium-16 p-medium-18 text-grey-500">
             {formatDateTime(event.startDateTime).dateTime}
         </p>
+        <Link href={`/events/${event._id}`}>
         <p className="p-medium-16 md:p-medium-20 line-clamp-2 flex-1 text-black">
             {event.title}
         </p>
+
+        </Link>
         <div className='flex-between w-full'>
             <p className="p-medium-14 md:p-medium-16 text-grey-600">
                 {event.organizer.firstName} {event.organizer.lastName}
@@ -74,7 +77,7 @@ const Card = ({event, hasOrderLink, hidePrice}: CardProps) => {
                 </Link>
             )}
         </div>
-        </Link>
+        </div>
     </div>
   )
 }
