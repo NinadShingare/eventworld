@@ -110,6 +110,11 @@ export type CheckoutOrderParams = {
   price: string
   isFree: boolean
   buyerId: string
+  customerName: string; // Adding customer name field
+  addressLine1: string; // Adding address line 1 field
+  city: string; // Adding city field
+  postalCode: string; // Adding postal code field
+  email: string; // Adding email field
 }
 
 export type CreateOrderParams = {

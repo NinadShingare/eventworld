@@ -27,7 +27,12 @@ const Checkout = ({event, userId}: {event: IEvent,userId:string}) => {
             eventId: event._id,
             price: event.price,
             isFree: event.isFree,
-            buyerId: userId
+            buyerId: userId,
+            customerName: 'John Doe', // Sample customer name, replace with actual value
+            addressLine1: '123 Main St', // Sample address line 1, replace with actual value
+            city: 'Sample City', // Sample city, replace with actual value
+            postalCode: '12345', // Sample postal code, replace with actual value
+            email: 'example@example.com' // Sample email, replace with actual value
           }
 
           await checkoutOrder(order);

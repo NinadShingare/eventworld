@@ -11,7 +11,8 @@ export const checkoutOrder = async (order: CheckoutOrderParams) => {
     const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
   
     const price = order.isFree ? 0 : Number(order.price) * 100;
-  
+
+    
     try {
 
         // Create Checkout Sessions from body params.
@@ -35,6 +36,18 @@ export const checkoutOrder = async (order: CheckoutOrderParams) => {
         mode: 'payment',
         success_url: `${process.env.NEXT_PUBLIC_SERVER_URL}/profile`,
         cancel_url: `${process.env.NEXT_PUBLIC_SERVER_URL}/`,
+        payment_intent_data: {
+          receipt_email: order.email, // Assuming you have email in order object
+          shipping: {
+              name: order.customerName, // Assuming you have customer name in order object
+              address: {
+                  line1: order.addressLine1, // Assuming you have address details in order object
+                  city: order.city,
+                  postal_code: order.postalCode,
+                  country: 'IN' // India
+              }
+          }
+      }
       });
       redirect(session.url!)
     } catch (error) {
