@@ -1,16 +1,25 @@
 import Collection from '@/components/shared/Collection'
 import { Button } from '@/components/ui/button'
 import { getEventsByUser } from '@/lib/actions/event.actions'
+import { getOrdersByUser } from '@/lib/actions/order.actions'
+import { IOrder } from '@/lib/database/models/order.model'
+import { SearchParamProps } from '@/types'
 import { auth } from '@clerk/nextjs'
 import Link from 'next/link'
 import React from 'react'
 
-const ProfilePage = async () => {
+const ProfilePage = async ({ searchParams}: SearchParamProps) => {
 
     const { sessionClaims } = auth();
     const userId = sessionClaims?.userId as string;
 
-    const organizedEvents = await getEventsByUser({ userId, page: 1 })
+    const ordersPage = Number(searchParams?.orderPage) || 1;
+    const eventsPage = Number(searchParams?.orderPage) || 1;
+
+    const orders = await getOrdersByUser({ userId, page:ordersPage })
+
+    const orderedEvents = orders?.data.map((order: IOrder) => order.event) || [];
+    const organizedEvents = await getEventsByUser({ userId, page: eventsPage})
   return (
     <>
         {/* my tickets */}
@@ -25,18 +34,18 @@ const ProfilePage = async () => {
         </div>
       </section>
 
-      {/* <section className="wrapper my-8">
+      <section className="wrapper my-8">
         <Collection 
           data={orderedEvents}
           emptyTitle="No event tickets purchased yet"
           emptyStateSubtext="No worries - plenty of exciting events to explore!"
           collectionType="My_Tickets"
           limit={3}
-          page={1}
+          page={ordersPage}
           urlParamName="ordersPage"
-          totalPages={2}
+          totalPages={orders?.totalPages}
         />
-      </section> */}
+      </section>
 
 
         {/* events organized */}
@@ -59,7 +68,7 @@ const ProfilePage = async () => {
           emptyStateSubtext="Go create some now"
           collectionType="Events_Organized"
           limit={3}
-          page={1}
+          page={eventsPage}
           urlParamName="eventsPage"
           totalPages={organizedEvents?.totalPages}
         />
