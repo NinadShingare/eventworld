@@ -12,7 +12,7 @@ import {
 const page = () => {
   return (
     <>
-    <section className="flex flex-col justify-center bg-primary-50 bg-dotted-pattern bg-contain">
+    <section className="flex flex-col justify-center bg-primary-50 bg-dotted-pattern bg-contain pr-0">
     
             <div className="flex w-full flex-col items-center gap-8 p-5 md:p-10 ">
                 <h2 className='h2-bold'>About Us </h2>
@@ -30,16 +30,16 @@ const page = () => {
                             alt="hero image"
                             width={638}
                             height={138}
-                            className="h-full min-h-[30px] object-cover object-center"
+                            className="h-full min-h-[10px] object-cover object-center md:max-h-[300px]"
                         />
-                        <Card className='w-full max-w-[550px]'>
+                        <Card className='max-w-[150px] sticky right-4'>
                             <Image src="/assets/images/profile1.jpg"
                                 alt="hero image"
                                 width={28}
                                 height={28}
                                 className="h-full w-full max-h-[150px] max-w-[150px] object-cover object-center py-1"
                             />
-                            <CardDescription className='mx-4'>
+                            <CardDescription className=''>
                                 Developed and Managed by Ninad Shingare
                             </CardDescription>
                         </Card>

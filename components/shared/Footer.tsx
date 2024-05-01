@@ -4,8 +4,8 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <footer className="border-t bg-grey-50 p-2 sm:p-0">
-      <div className="flex-center flex-between flex flex-col gap-4 p-2 text-center sm:flex-row">
+    <footer className="border-t bg-grey-50 pt-4 pl-2">
+      <div className="flex-center flex-between flex flex-col gap-4 p-0 text-center sm:flex-row">
         <Link href="/">
           <Image 
           src="/assets/images/logo1.png"
