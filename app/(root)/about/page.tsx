@@ -23,7 +23,7 @@ const page = () => {
                         <CardTitle>About EventWorld</CardTitle>
                     </CardHeader>
                     <CardContent>
-                        <p>EventWorld focuses on providing an easy and reliable platform for users to book tickets to events of any type through online mode. The registered users of the system can book tickets to concerts, sports events, theatre shows, and other events from anywhere at any time.</p>
+                        <p>EventWorld focuses on providing an easy and reliable platform for users to book tickets to events of any type through online mode. The registered users of the system can sell as well as book tickets to concerts, sports events, theatre shows, and other events from anywhere at any time.</p>
                     </CardContent>
                     <CardFooter className='flex items-center'>
                         <Image src="/assets/images/logo1.png"
@@ -35,9 +35,9 @@ const page = () => {
                         <Card className='w-full max-w-[550px]'>
                             <Image src="/assets/images/profile1.jpg"
                                 alt="hero image"
-                                width={38}
-                                height={38}
-                                className="h-full w-full max-h-[150px] max-w-[150px] object-cover object-center mx-4 py-1"
+                                width={28}
+                                height={28}
+                                className="h-full w-full max-h-[150px] max-w-[150px] object-cover object-center py-1"
                             />
                             <CardDescription className='mx-4'>
                                 Developed and Managed by Ninad Shingare
