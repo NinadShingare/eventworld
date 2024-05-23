@@ -27,9 +27,9 @@ export default async function Home({ searchParams }:SearchParamProps) {
       <div className="wrapper grid grid-cols-1 gap-5 md:grid-cols-2 2xl:gap-0">
         <div className="flex flex-col justify-center gap-8">
           <h1 className="h1-bold">
-            Discover, Experience, Enjoy: Your Events, Our Platform!
+            Host, Connect, Celebrate: Your Events, Our Platform!
           </h1>
-          <p className="p-regular-20 md:p-regular-24">Explore and book tickets to thousands of events with our global community of event enthusiasts. Unlock valuable insights and guidance from experienced event organizers and industry professionals.</p>
+          <p className="p-regular-20 md:p-regular-24">Book and learn helpful tips from 3,168+ mentors in world-class companies with our global community.</p>
           <Button size="lg" asChild className="button w-full sm:w-fit">
             <Link href="#events">
               Explore Now
@@ -68,4 +68,4 @@ export default async function Home({ searchParams }:SearchParamProps) {
 // git add .
 // git commit -m 'first2 commit'
 //git branch -M main 
-// git push -u origin main
+// 
