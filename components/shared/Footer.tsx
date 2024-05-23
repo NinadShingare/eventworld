@@ -5,7 +5,7 @@ import React from 'react'
 const Footer = () => {
   return (
     <footer className="border-t bg-grey-50 pt-4 pl-2">
-      <div className="flex-center flex-between flex flex-col gap-4 p-0 text-center sm:flex-row">
+      <div className="flex-center flex-between flex flex-col gap-4 p-0 pb-4 pl-4 text-center sm:flex-row">
         <Link href="/">
           <Image 
           src="/assets/images/logo1.png"
