@@ -1,3 +1,5 @@
+A MERN stack event ticketing platform with event creation and management features, enabling users to book tickets for concerts, sports events, shows, etc. from anywhere and any time, with secured online payments.
+
 <img width="940" height="440" alt="image" src="https://github.com/user-attachments/assets/fc179bad-b119-462b-b54b-af6fc7dcfa90" />
 <img width="940" height="437" alt="image" src="https://github.com/user-attachments/assets/cc260918-a995-494e-964e-57c3fa2aed58" />
 <img width="940" height="438" alt="image" src="https://github.com/user-attachments/assets/3dd25bea-1157-4552-9c5c-d431d8c3ff39" />
